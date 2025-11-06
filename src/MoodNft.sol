@@ -16,7 +16,7 @@ contract MoodNft is ERC721 {
     }
     mapping(uint256 => NFTState) private s_tokenIdToState;
 
-    constructor(string memory SadSvgUri, string memory HappySvgUri) ERC721("Moodie", "MD") {
+    constructor(string memory SadSvgUri, string memory HappySvgUri) ERC721("Mood NFT", "MN") {
         s_TokenCounter = 0;
         s_SadSvgUri = SadSvgUri;
         s_HappySvgUri = HappySvgUri;
