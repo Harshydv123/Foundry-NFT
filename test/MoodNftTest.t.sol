@@ -7,7 +7,6 @@ import {MoodNft} from "../src/MoodNft.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {Vm} from "forge-std/Vm.sol";
 
-
 contract MoodNftTest is Test {
     string constant NFT_NAME = "Moodie";
     string constant NFT_SYMBOL = "MD";
@@ -45,7 +44,7 @@ contract MoodNftTest is Test {
         moodNft.mintNft();
         //console.logString(moodNft.tokenURI(0));
         //console.logString(HAPPY_MOOD_URI);
-        assert(keccak256(abi.encodePacked(moodNft.tokenURI(0)))==keccak256(abi.encodePacked(HAPPY_MOOD_URI)));
+        assert(keccak256(abi.encodePacked(moodNft.tokenURI(0))) == keccak256(abi.encodePacked(HAPPY_MOOD_URI)));
     }
 
     function testFlipTokenToSad() public {

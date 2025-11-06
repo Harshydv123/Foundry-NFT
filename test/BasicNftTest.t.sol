@@ -18,9 +18,8 @@ contract BasicNftTest is Test {
     address public constant USER = address(1);
 
     function setUp() public {
-       
-            deployer = new DeployBasicNft();
-            basicNft = deployer.run();
+        deployer = new DeployBasicNft();
+        basicNft = deployer.run();
     }
 
     function testInitializedCorrectly() public view {
@@ -41,5 +40,4 @@ contract BasicNftTest is Test {
 
         assert(keccak256(abi.encodePacked(basicNft.tokenURI(0))) == keccak256(abi.encodePacked(PUG_URI)));
     }
-
 }
